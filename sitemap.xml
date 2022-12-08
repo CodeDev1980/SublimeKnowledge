@@ -3,5 +3,43 @@
   <url>
     <loc>https://sublimeknowledge.herokuapp.com/</loc>
   </url>
-  
+  <url>
+    <loc>https://sublimeknowledge.herokuapp.com/about</loc>
+  </url>
+  <url>
+    <loc>https://sublimeknowledge.herokuapp.com/blogs</loc>
+  </url>
+  <url>
+    <loc>https://sublimeknowledge.herokuapp.com/payment</loc>
+  </url>
+  <url>
+    <loc>https://sublimeknowledge.herokuapp.com/love</loc>
+  </url>
+  <url>
+    <loc>https://sublimeknowledge.herokuapp.com/health</loc>
+  </url>
+  <url>
+    <loc>https://sublimeknowledge.herokuapp.com/wealth</loc>
+  </url>
+  <url>
+    <loc>https://sublimeknowledge.herokuapp.com/auth/login</loc>
+  </url>
+  <url>
+    <loc>https://sublimeknowledge.herokuapp.com/auth/register</loc>
+  </url>
+  <url>
+    <loc>https://sublimeknowledge.herokuapp.com/createRegister</loc>
+  </url>
+  <url>
+    <loc>https://sublimeknowledge.herokuapp.com/singlePost/6391475cff7b9b3818570d7a</loc>
+  </url>
+  <url>
+    <loc>https://sublimeknowledge.herokuapp.com/reviews</loc>
+  </url>
+  <url>
+    <loc>https://sublimeknowledge.herokuapp.com/admin</loc>
+  </url>
+  <url>
+    <loc>https://sublimeknowledge.herokuapp.com/createReview</loc>
+  </url>
 </urlset>
