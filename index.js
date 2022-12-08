@@ -81,7 +81,10 @@ const aboutController = require('./controllers/about')
 const panelController = require('./controllers/panel');
 const paymentController = require('./controllers/payment')
 const thankYouController = require('./controllers/thankyou');
-const sendContactController = require('./controllers/sendForm');
+////////////////////////////////////////////////////////////////
+// NOT WORKING FEATURE YET
+// const sendContactController = require('./controllers/sendForm');
+///////////////////////////////////////////////////////////////
 const productsController = require('./controllers/products')
 const healthController = require('./controllers/health')
 const wealthController = require('./controllers/wealth')
@@ -141,15 +144,18 @@ app.get('/register/thankyou', thankYouController)
 app.get('/health', healthController)
 app.get('/wealth', wealthController)
 app.get('/love', loveController)
-app.post("/contact", sendContactController, async (req, res, next) => {
-    const { yourname, youremail, yoursubject, yourmessage } = req.body;
-    try {
-      await mainMail(yourname, youremail, yoursubject, yourmessage);
+/////////////////////////////////////////////////////////////////////////////
+// Waiting to connect to a service for this feature, DO NOT UNCOMMENT
+// app.post("/contact", sendContactController, async (req, res, next) => {
+//     const { yourname, youremail, yoursubject, yourmessage } = req.body;
+//     try {
+//       await mainMail(yourname, youremail, yoursubject, yourmessage);
       
-      res.send("Message Successfully Sent!");
-    } catch (error) {
-      res.send("Message Could not be Sent");
-    }
-  });
+//       res.send("Message Successfully Sent!");
+//     } catch (error) {
+//       res.send("Message Could not be Sent");
+//     }
+//   });
+////////////////////////////////////////////////////////////////////////////
 
 app.use((req,res) => res.render('notFound'));
