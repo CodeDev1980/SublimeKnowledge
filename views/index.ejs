@@ -241,56 +241,27 @@
 
       <div class="row" style="margin-top: 40px;">
 
+        <% for(i=0; i < reviews.length; i++) { %> 
+        
         <div data-mdb-toggle="animation"
              data-mdb-animation-start="onScroll"
              data-mdb-animation="fade-in-up"
              data-mdb-animation-delay="100"
              class="col-md-4 text-center mb-4" itemref="reviews">
           <div class="testimonial">
-            <h4 class="font-weight-bold dark-grey-text mt-4">Omar Hernandez</h4>
-            <h6 class="font-weight-bold text-dark fw-bold my-3">I used Love Health Wealth</h6>
+            <h4 class="font-weight-bold dark-grey-text mt-4"><%= reviews[i].yourName %></h4>
+            <h6 class="font-weight-bold text-dark fw-bold my-3"><%= reviews[i].Product %></h6>
             <p class="font-weight-normal dark-grey-text">
               <i class="fas fa-quote-left pr-2"></i>
-              Results: Increased awareness, Inspiring, great fulfillment!
+              <%= reviews[i].description %>
             </p>
 
           </div>
 
         </div>
-        <div data-mdb-toggle="animation"
-             data-mdb-animation-start="onScroll"
-             data-mdb-animation="fade-in-up"
-             data-mdb-animation-delay="300"
-             class="col-md-4 text-center mb-4" itemref="reviews">
+          
+        <% } %>
 
-          <div class="testimonial">
-            <h4 class="font-weight-bold dark-grey-text mt-4">Ashleigh Johnson</h4>
-            <h6 class="font-weight-bold text-dark fw-bold my-3">I used Love Health Wealth</h6>
-            <p class="font-weight-normal dark-grey-text">
-              <i class="fas fa-quote-left pr-2"></i>
-              LIFE CHANGING IN MORE WAYS THAN I COULD EVER IMAGINE!!!!
-            </p>
-
-          </div>
-
-        </div>
-        <div data-mdb-toggle="animation"
-             data-mdb-animation-start="onScroll"
-             data-mdb-animation="fade-in-up"
-             data-mdb-animation-delay="500"
-             class="col-md-4 text-center mb-4" itemref="reviews">
-
-          <div class="testimonial">
-            <h4 class="font-weight-bold dark-grey-text mt-4">Dee</h4>
-            <h6 class="font-weight-bold text-dark fw-bold my-3">I used Love Health Wealth</h6>
-            <p class="font-weight-normal dark-grey-text">
-              <i class="fas fa-quote-left pr-2"></i>
-              Thank you for this Great Program… I’ve achieved success.
-            </p>
-
-          </div>
-
-        </div>
       </div>
 
     </div>
