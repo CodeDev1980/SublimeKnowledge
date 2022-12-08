@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="google-site-verification" content="08ysSt4y4xP43FkERUcVNM2iJjh_NVmMiQd4Df0Rnrw" />
+    <meta name="keywords" content="Life coach, Love Coach, Finance Coach">
+    <meta description="Receive guidance and coaching from Sublime Knowledge, one on one teaching and or a book to cover topics." >
+    <title>Sublime Knowledge - Create Review</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="/img/newLogo.png" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Whisper&display=swap" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="/css/mdb.min.css">
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body class="blog-layout-full">
+<%- include('layouts/navbar') -%>
+
+<div class="container-fluid" style="margin-top: 210px; margin-bottom: 80px;">
+
+
+<style>
+    .blog-layout-full {
+        font-family: 'Montserrat', sans-serif;
+        background: rgb(255,255,255);
+        background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,206,247,1) 10%, rgb(164, 209, 235) 100%);
+        color: white;
+        padding-bottom: 10px;
+    }
+</style>
+<body class="blog-layout-full">
+<%- include('layouts/navbar') -%>
+
+<div class="createReview-bg"></div>
+
+<div class="container-fluid" style="margin-top: 40px; margin-bottom: 60px;">
+
+
+    <div class="container text-center">
+        <h1 class="display-4 mb-3 mt-3 text-center text-white">Write A Review</h1>
+
+        <!-- Default form login -->
+        <form action="/review/store" method="post" enctype="multipart/form-data">
+
+            <!-- Email -->
+            <input type="text" required name="title" id="title" class="form-control mb-4" placeholder="Title">
+
+            <div class="row">
+                <div class="col-md">
+                    <input type="text" name="yourName" id="yourName" required class="form-control mb-4" placeholder="Your Name">
+                </div>
+                <div class="col-md">
+                    <input type="text" name="Product" id="Product" required class="form-control mb-4" placeholder="Area Worked On">
+                </div>
+            </div>
+
+            <textarea name="description" minlength="10" maxlength="255" id="description" required rows="5" placeholder="Summary of experience..." class="form-control mb-4"></textarea>
+
+            <!-- Sign in button -->
+            <button class="btn btn-black rounded-pill" type="submit">Submit Review</button>
+
+
+        </form>
+        <!-- Default form login -->
+
+    </div>
+</div>
+
+<%- include('layouts/scripts') -%>
+</body>
+</html>

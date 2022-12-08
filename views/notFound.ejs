@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('layouts/header') -%>
+<body>
+
+<header>
+    <!-- Navbar -->
+    <%- include('layouts/navbar') -%>
+    <!-- Navbar -->
+
+    <!--Section: Design Block-->
+    <section class="mb-8">
+        <div id="intro" class="bg-image" style="
+        background-image: url('/img/404.png');
+        height: 40vh;">
+
+        </div>
+    </section>
+    <!--Section: Design Block-->
+</header>
+
+<main class="mb-8 mt-5">
+    <div class="container text-center">
+
+        <div class="row row-cols-xl-6 d-flex mx-auto justify-content-center align-items-center text-center py-2 me-1">
+            <h1>Hmm, What you're looking for isn't found. Perhaps you meant something else?</h1>
+        </div>
+    </div>
+</main>
+
+<%- include('layouts/footer') -%>
+
+</body>
+<%- include('layouts/scripts') -%>
+</html>

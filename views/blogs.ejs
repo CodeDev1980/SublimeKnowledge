@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="description" content="Blogs page">
+    <title>SublimeKnowledge - Blogs</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="/img/newLogo" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <!-- Google Fonts Roboto -->
+    <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Whisper&display=swap" rel="stylesheet">
+    <!-- MDB ESSENTIAL -->
+    <link rel="stylesheet" href="/css/mdb.min.css" />
+    <!-- MDB PLUGINS -->
+    <link rel="stylesheet" href="/plugins/css/all.min.css" />
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <style></style>
+</head>
+
+<body>
+<header>
+    <!-- Navbar -->
+    <%- include('layouts/navbar') -%>
+    <!-- Navbar -->
+
+    <!--Section: Design Block-->
+    <section class="blogs-intro">
+        <div class="container text-center">
+            <!-- <h1 class="display-4 text-white">Sublime Knowledge Posts</h1> -->
+        </div>
+    </section>
+    <!--Section: Design Block-->
+</header>
+
+<main class="blog-layout-full text-dark" style="padding-top: 50px; padding-bottom: 70px;">
+
+    <div class="container">
+
+        <div class="container" style="margin-bottom: 20px;">
+            <p class="lead">
+                Welcome to our Blogs section. Read helpful tips on how to get the most out of the Intuitive
+                Ascending Mindset Program. We will also list upcoming events that Sublime Knowledge is hosting. 
+                We appreciate the opportunity to serve our global community. Thank you.
+            </p>
+        </div>
+
+        <div class="row text-center">
+            <% for(i=0; i<blogs.length; i++){ %>
+                <div class="col-md m-2">
+                    <a href="/singlePost/<%= blogs[i]._id %>"></a>
+                        <div data-mdb-toggle="animation"
+                                data-mdb-animation-start="onLoad"
+                                data-mdb-animation="fade-in-up"
+                                data-mdb-animation-delay="300"
+                                class="card hover-zoom p-3" style="width: 18rem; margin-left: auto; margin-right: auto;">
+                                <a href="/singlePost/<%= blogs[i]._id %>">
+                                    <h2><%= blogs[i].title %></h2>
+                                </a>
+                                <!-- <p class="fw-bold lead text-dark">Posted By <p%= blogs[i].email %></p> -->
+                                <p class="text-muted">
+                                    Posted on <%= blogs[i].datePosted.toLocaleDateString() %>
+                                </p>
+                        </div>
+                    </a>
+                </div>
+            <% } %>
+        </div>
+    </div>
+
+</main>
+
+<%- include('layouts/scripts') -%>
+
+</body>
+
+
+</html>

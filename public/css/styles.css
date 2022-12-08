@@ -1,0 +1,223 @@
+/* Color of the links BEFORE scroll */
+.navbar-scroll .nav-link,
+.navbar-scroll .navbar-toggler-icon,
+.navbar-scroll .navbar-brand {
+    color: #fff;
+}
+
+/* Color of the links AFTER scroll */
+.navbar-scrolled .nav-link,
+.navbar-scrolled .navbar-toggler-icon,
+.navbar-scrolled .navbar-brand {
+    color: #fff;
+}
+
+/* Color of the navbar AFTER scroll */
+.navbar-scroll,
+.navbar-scrolled {
+    background-color: #cbbcb1;
+}
+
+.mask-custom {
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, .15);
+}
+
+.navbar-brand {
+    font-size: 1.75rem;
+    letter-spacing: 3px;
+}
+
+/********************home page***********************/
+.home-bg {
+    background: url('https://images.unsplash.com/photo-1454942901704-3c44c11b2ad1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80')
+    no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    /*https://images.unsplash.com/photo-1470472304068-4398a9daab00?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80*/
+}
+
+.btn-fixed {
+    width: 300px;
+    opacity: 0.5;
+    font-size: 19px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 240px;
+}
+
+.blog-layout-full {
+    font-family: 'Montserrat', sans-serif;
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,206,247,1) 10%, rgb(164, 209, 235) 100%);
+    color: white;
+    padding-bottom: 30px;
+}
+
+.love-info {
+    background: url('../img/love.png') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 150px;
+
+}
+
+@media(max-width: 768px){
+    .love-info {
+        padding-top: 35px!important;
+    }
+}
+
+.finance-info {
+    background: url(https://th.bing.com/th/id/OIP.P236esvZiqIYFQY-X3rhdgHaE6?pid=ImgDet&rs=1) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 150px;
+}
+
+.life-info {
+    background: url('../img/heatlhInfo.png') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 150px;
+}
+
+.card-title {
+    font-size: 47px;
+    padding-top: 15px;
+}
+
+
+
+.pageLogo {
+    position: absolute;
+    top: 710px;
+    left: 45%;
+    right: 45%;
+}
+
+.section-1 {
+    background: url(https://images.unsplash.com/photo-1484627147104-f5197bcd6651?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding-top: 160px;
+    padding-bottom: 160px;
+    opacity: 0.8;
+    border-radius: 7px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.info-color {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    border: 1px solid darkblue;
+    opacity: 0.7;
+    background-color: darkslateblue;
+    color: white;
+}
+
+.about-intro {
+    background: url('../img/about.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding-top: 190px;
+    padding-bottom: 130px;
+}
+
+  .love-intro {
+      background: url('../img/loveBg.png') no-repeat center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      padding-top: 190px;
+      padding-bottom: 130px;
+  }
+
+.health-intro {
+    background: url('../img/health.png') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding-top: 190px;
+    padding-bottom: 130px;
+}
+
+.wealth-intro {
+    background: url('../img/wealth.png') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding-top: 190px;
+    padding-bottom: 130px;
+}
+
+.reviews-intro {
+    background: url('https://www.starboardleadership.com/wp-content/uploads/hero-transition-planning-001-1.jpg') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding-top: 140px;
+    padding-bottom: 140px;
+}
+
+.blogs-intro {
+    background: url('https://www.hallaminternet.com/wp-content/uploads/2020/01/Is-blogging-relevant-anymore.jpeg') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 55vh;
+}
+
+.links-wrapper {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.links-wrapper > .nav-link {
+    text-align: center;
+}
+
+.links-wrapper > .nav-link a {
+    font-family: "Ubuntu Condensed", sans-serif;
+    color: dimgrey;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.links-wrapper > .nav-link a:hover {
+    color: lightslategrey;
+    letter-spacing: 4px;
+}
+
+.text-hover a {
+    color: black;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.text-hover a:hover {
+    color: lightslategrey;
+    text-decoration: underline;
+    letter-spacing: 2px;
+}

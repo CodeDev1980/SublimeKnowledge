@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>SublimeKnowledge - Reviews</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="/img/newLogo" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <!-- Google Fonts Roboto -->
+    <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Whisper&display=swap" rel="stylesheet">
+    <!-- MDB ESSENTIAL -->
+    <link rel="stylesheet" href="/css/mdb.min.css" />
+    <!-- MDB PLUGINS -->
+    <link rel="stylesheet" href="/plugins/css/all.min.css" />
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <style></style>
+</head>
+
+<body>
+<header>
+    <!-- Navbar -->
+    <%- include('layouts/navbar') -%>
+    <!-- Navbar -->
+
+    <!--Section: Design Block-->
+    <section class="reviews-intro">
+        <div class="container text-center">
+            <h1 class="display-1 text-white" style="font-family: 'Whisper', cursive!important;">The Experience We Deliver</h1>
+        </div>
+    </section>
+    <!--Section: Design Block-->
+</header>
+
+<main class="blog-layout-full text-dark" style="padding-top: 50px; padding-bottom: 70px;">
+
+    <div class="container">
+
+        <h2 data-mdb-toggle="animation"
+            data-mdb-animation-start="onLoad"
+            data-mdb-animation="fade-in-up"
+            data-mdb-animation-delay="100"
+            class="p-4 links-wrapper">
+            <span class="nav-link">
+                <a href="/createReview">Write A Review</a>
+            </span>
+        </h2>
+
+        <div class="row text-center">
+            <% for(i=0; i<reviews.length; i++){ %>
+            <div class="col-lg-3 col-md-4 col-sm-12">
+                <div data-mdb-toggle="animation"
+                     data-mdb-animation-start="onLoad"
+                     data-mdb-animation="fade-in-up"
+                     data-mdb-animation-delay="300"
+                     class="card p-3 m-2" style="width: 100%;">
+                    <h2 class="display-5" style="font-family: 'Whisper', cursive!important;"><%= reviews[i].yourName %></h2>
+                    <h3 class="fw-bold" style="font-family: 'Whisper', cursive!important;"><%= reviews[i].Product %></h3>
+                    <p class="text-muted">
+                        <%= reviews[i].description %>
+                        <br>
+                        Posted on <%= reviews[i].datePosted.toLocaleDateString() %>
+                    </p>
+                </div>
+            </div>
+            <% } %>
+        </div>
+    </div>
+
+</main>
+
+<%- include('layouts/scripts') -%>
+
+</body>
+
+
+</html>

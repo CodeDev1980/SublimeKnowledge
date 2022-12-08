@@ -1,0 +1,100 @@
+<nav class="navbar navbar-expand-lg navbar-light fixed-top mask-custom shadow-0">
+    <div class="container">
+      <a class="navbar-brand" href="#!">
+        <img src="/img/newLogo.png" height="65px;" alt="logo" />
+      </a>
+      <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+              data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" style="font-size: 22px;" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="font-size: 22px;" href="/about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="font-size: 22px;" href="/blogs">Blogs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="font-size: 22px;" href="/payment">Services</a>
+          </li>
+          <!-- Dropdown -->
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-mdb-toggle="dropdown"
+              aria-expanded="false"
+              style="font-size: 22px;"
+            >
+              Areas
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li>
+                <a class="dropdown-item" href="/love">Love</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="/health">Health</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="/wealth">Wealth</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="navbar-nav d-flex flex-row">
+          <li class="nav-item me-3 me-lg-0">
+            <a class="nav-link" style="font-size: 22px;" href="https://www.instagram.com/p/Cd_ORVkpzVq/?igshid=YmMyMTA2M2Y=" target="_blank">
+              <i class="fab fa-instagram" style="font-size:22px;"></i>
+            </a>
+          </li>
+          <li class="nav-item me-3 me-lg-0">
+            <a class="nav-link" style="font-size: 22px;" href="https://www.facebook.com/Sublime-Knowledge-105110512253634/" target="_blank">
+              <i class="fab fa-facebook"></i>
+            </a>
+          </li>
+          <% if(!loggedIn){ %>
+          <li class="nav-item me-3 me-lg-0">
+            <a class="nav-link" style="font-size: 22px;" href="/auth/login">
+              <i class="fas fa-sign-in-alt"></i>
+            </a>
+          </li>
+          <% } %>
+          <% if(loggedIn){ %>
+          <!-- Dropdown -->
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-mdb-toggle="dropdown"
+              aria-expanded="false"
+              style="font-size:22px;"
+            >
+            <i class="far fa-user-circle"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li>
+                <a class="dropdown-item" href="/panel">Panel</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="mailto:stephenbrooks714@gmail.com">Support</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="/auth/logout">Logout</a>
+              </li>
+            </ul>
+          </li>
+          <% } %>
+        </ul>
+      </div>
+    </div>
+</nav>
+

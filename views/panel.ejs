@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="google-site-verification" content="08ysSt4y4xP43FkERUcVNM2iJjh_NVmMiQd4Df0Rnrw" />
+    <meta name="keywords" content="Life coach, Love Coach, Finance Coach">
+    <meta description="Receive guidance and coaching from Sublime Knowledge, one on one teaching and or a book to cover topics." >
+    <title></title>
+    <!-- MDB icon -->
+    <link rel="icon" href="/img/newLogo.png" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Whisper&display=swap" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="/css/mdb.min.css">
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body class="blog-layout-full">
+<%- include('layouts/navbar') -%>
+
+<div class="container-fluid" style="margin-top: 170px; margin-bottom: 80px;">
+
+
+<style>
+    .blog-layout-full {
+        font-family: 'Montserrat', sans-serif;
+        background: rgb(255,255,255);
+        background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,206,247,1) 10%, rgb(164, 209, 235) 100%);
+        color: white;
+        padding-bottom: 10px;
+    }
+</style>
+<body class="blog-layout-full">
+<%- include('layouts/navbar') -%>
+
+<div class="createReview-bg"></div>
+
+<div class="container-fluid text-center" style="margin-top: 70px; margin-bottom: 70px;">
+    <h2 class="display-6 mb-2">Recent Registers</h2>
+    <p class="lead text-white mb-5">
+        When someone registers on the website their info will appear below in a card type 
+        display with a white background.
+    </p>
+
+    <% for(i=0; i<register.length; i++){ %>
+        <div data-mdb-toggle="animation"
+                 data-mdb-animation-start="onLoad"
+                 data-mdb-animation="fade-in-up"
+                 data-mdb-animation-delay="300"
+                 class="card hover-zoom p-3 m-2 text-dark" style="width: 20rem;">
+                <h2 class="text-dark"><%= register[i].name %></h2> 
+                <p>
+                    <%= register[i].phone %> <br>
+                    <%= register[i].email %> <br>
+                    <%= register[i].message %> <br>
+                    <%= register[i].datePosted.toLocaleDateString() %>
+                </p>
+            <a href="/deleteRegister/<%= register[i]._id %>" class="btn btn-warning">Delete</a>
+      </div>
+    <% } %>
+
+    <div class="container text-center mt-5">
+     
+        <!-- Default form login -->
+        <div class="row">
+            <div class="col-md m-2">
+                <form action="/post/store" method="post" enctype="multipart/form-data">
+
+                    <!-- Email -->
+                    <input type="text" required name="title" id="title" class="form-control mb-4" placeholder="Title">
+        
+                    <textarea name="message" id="message" spellcheck="true" required rows="5" placeholder="Enter Blog Article" class="form-control mb-4"></textarea>
+        
+                    <!-- Sign in button -->
+                    <button class="btn btn-black rounded-pill" type="submit">Submit Article</button>
+        
+        
+                </form>
+            </div>
+            <div class="col-md m-2">
+                <h2>Recent Blog Post By You</h2>
+                <% for(i=0; i<blogs.length; i++){ %>
+                    <div data-mdb-toggle="animation"
+                             data-mdb-animation-start="onLoad"
+                             data-mdb-animation="fade-in-up"
+                             data-mdb-animation-delay="300"
+                             class="card hover-zoom p-3 m-2" style="width: 100%;">
+                             <!-- <h2 class="text-dark"><%= blogs[i].title %></h2> -->
+                            <a href="/singlePost/<%= blogs[i]._id %>">
+                                <h2 class="text-dark"><%= blogs[i].title %></h2>
+                            </a>
+                            <p class="lead text-dark">
+                                <%= blogs[i].message %>
+                            </p>
+                            <p class="text-muted">
+                                Posted on <%= blogs[i].datePosted.toLocaleDateString() %>
+                            </p>
+                            <a href="/deletePost/<%= blogs[i]._id %>" class="btn btn-danger rounded-pill">Delete Post</a> 
+                    </div>
+                <% } %>
+            </div>
+        </div>
+        <!-- Default form login -->
+    </div>
+</div>
+
+<%- include('layouts/scripts') -%>
+</body>
+</html>

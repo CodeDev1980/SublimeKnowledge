@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>SublimeKnowledge - Blogs</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="/img/newLogo" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <!-- Google Fonts Roboto -->
+    <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Whisper&display=swap" rel="stylesheet">
+    <!-- MDB ESSENTIAL -->
+    <link rel="stylesheet" href="/css/mdb.min.css" />
+    <!-- MDB PLUGINS -->
+    <link rel="stylesheet" href="/plugins/css/all.min.css" />
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .blog {
+            background: url('https://delphiboston.org/wp-content/uploads/2018/02/bigstock-189153271.jpg') no-repeat center center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            height: 45vh;
+        }
+    </style>
+</head>
+
+<body>
+<header>
+    <!-- Navbar -->
+    <%- include('layouts/navbar') -%>
+    <!-- Navbar -->
+
+    <!--Section: Design Block-->
+    <section class="blog">
+        
+    </section>
+    <!--Section: Design Block-->
+</header>
+
+<main class="blog-layout-full text-dark" style="padding-top: 50px; padding-bottom: 70px;">
+    <div class="container">
+        <nav aria-label="breadcrumb mb-4">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/blogs">All Blogs</a></li>
+              <li class="breadcrumb-item active" aria-current="page"><%= post.title %></li>
+            </ol>
+        </nav>
+        <h1 class="display-6 text-dark" style="padding-top: 30px;"><%= post.title %></h1>
+    </div>
+
+    <div class="container" style="padding-top: 10px; padding-bottom: 70px;">
+
+        <div class="row">
+            <div class="col-md m-2">
+                <h4>Posted By <%= post.email %></h4>
+                <p class="lead">
+                    <%= post.message %>
+                </p>
+                <p class="text-muted">
+                    <%= post.datePosted.toLocaleString() %>
+                </p>
+
+                <br>
+                <% if(loggedIn){ %> 
+                    <a href="/deletePost/<%= post._id %>" class="btn btn-danger rounded-pill">delete this</a>    
+                <% } %>
+            </div>
+
+            </div>
+           
+
+        </div>
+    </div>
+
+</main>
+
+<%- include('layouts/scripts') -%>
+
+</body>
+
+
+</html>
